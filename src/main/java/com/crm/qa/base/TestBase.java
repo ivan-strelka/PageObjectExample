@@ -14,15 +14,17 @@ import java.util.concurrent.TimeUnit;
 
 public class TestBase {
 
-    static WebDriver driver;
-    static Properties properties;
+    public static WebDriver driver;
+    public static Properties properties;
 
-    public TestBase() throws IOException {
+    public TestBase() {
         try {
             properties = new Properties();
-            FileInputStream ip = new FileInputStream(System.getProperty("src/main/resources/config.properties"));
+            FileInputStream ip = new FileInputStream("src/main/resources/config.properties");
             properties.load(ip);
         } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
             e.printStackTrace();
         }
 
@@ -34,12 +36,12 @@ public class TestBase {
 
         if (browserName.equals("chrome")) {
             System.setProperty("webdriver.chrome.driver",
-                    "src/main/java/com/crm/qa/util/chromedriver_linux64/chromedriver");
+                    "src/main/java/com/crm/qa/drivers/chromedriver_linux64/chromedriver");
             driver = new ChromeDriver();
 
         } else if (browserName.equals("firefox")) {
             System.setProperty("webdriver.gecko.driver",
-                    "src/main/java/com/crm/qa/util/geckodriver-v0.26.0-linux64/geckodriver");
+                    "src/main/java/com/crm/qa/drivers/geckodriver-v0.26.0-linux64/geckodriver");
             driver = new FirefoxDriver();
         }
 
