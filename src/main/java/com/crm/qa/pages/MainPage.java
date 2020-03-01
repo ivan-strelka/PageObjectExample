@@ -36,7 +36,7 @@ public class MainPage extends TestBase {
         return new SignUpPage();
     }
 
-    public String validateLoginPageTitile() {
+    public String validateLoginPageTitle() {
         return driver.getTitle();
     }
 

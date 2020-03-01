@@ -29,7 +29,7 @@ public class MainPageTest extends TestBase {
 
     @Test(priority = 2)
     public void validateTitle() {
-        String title = mainPage.validateLoginPageTitile();
+        String title = mainPage.validateLoginPageTitle();
         Assert.assertEquals(title, "Free CRM #1 cloud software for any business large or small");
     }
 
