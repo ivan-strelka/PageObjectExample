@@ -46,6 +46,7 @@ public class HomePageTest extends TestBase {
     public void userNameIsDisplayed() {
         Assert.assertTrue(homePage.userNameIsDisplayed());
     }
+    //50:48  https://www.youtube.com/watch?v=ea0P7MBQmiM&list=PLFGoYjJG_fqq6cHeqfsDes3pdVh3kpl74&index=3
 
 
     @AfterMethod
