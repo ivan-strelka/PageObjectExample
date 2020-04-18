@@ -45,7 +45,7 @@ public class TestBase {
             driver = new FirefoxDriver();
         }
 
-        driver.manage().window().setSize(new Dimension(1200, 800));
+        driver.manage().window().setSize(new Dimension(1000, 700));
         driver.manage().deleteAllCookies();
         driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
